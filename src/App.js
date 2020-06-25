@@ -12,7 +12,7 @@ function App() {
       <h1>Your Blog</h1>
       <p>These are your most recent posts</p>
       <input placeholder="What's up?" />
-      <button>Submit</button>
+      <button onClick={onSubmit}>Submit</button>
     </div>
   );
 }

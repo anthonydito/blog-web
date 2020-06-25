@@ -6,7 +6,7 @@ function App() {
   const [text, setText] = React.useState("");
 
   const onSubmit = () => {
-    alert("We need to submit the user's input!");
+    alert(text);
   };
 
   const onInputChange = (e) => {

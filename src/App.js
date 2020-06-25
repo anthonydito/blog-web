@@ -9,6 +9,10 @@ function App() {
     alert("We need to submit the user's input!");
   };
 
+  const onInputChange = (e) => {
+    setText(e.target.value);
+  }
+
   return (
     <div className="App">
       <h1>Your Blog</h1>

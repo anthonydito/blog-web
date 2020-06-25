@@ -2,6 +2,11 @@ import React from 'react';
 import './App.css';
 
 function App() {
+
+  const onSubmit = () => {
+    alert("We need to submit the user's input!");
+  };
+
   return (
     <div className="App">
       <h1>Your Blog</h1>

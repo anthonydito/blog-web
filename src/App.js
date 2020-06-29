@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import BlogPost from './BlogPost';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         value={text} 
         placeholder="What's up?" />
       <button onClick={onSubmit}>Submit</button>
+      <BlogPost />
+      <BlogPost />
+      <BlogPost />
     </div>
   );
 }

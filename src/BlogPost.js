@@ -1,10 +1,13 @@
 import React from "react";
 
-function BlogPost() {
+function BlogPost(props) {
+
+    const createdAtFormatted = props.createdAt.toLocaleString();
+
     return (
         <div>
-            <p>The blog post text will go here</p>
-            <p>here is where we will put the date</p>
+            <p>{props.text}</p>
+            <p>{createdAtFormatted}</p>
         </div>
     );
 }

@@ -23,9 +23,9 @@ function App() {
         value={text} 
         placeholder="What's up?" />
       <button onClick={onSubmit}>Submit</button>
-      <BlogPost />
-      <BlogPost />
-      <BlogPost />
+      <BlogPost text="Blog Post 1" createdAt={new Date()} />
+      <BlogPost text="Blog Post 2" createdAt={new Date()} />
+      <BlogPost text="Blog Post 3" createdAt={new Date()} />
     </div>
   );
 }

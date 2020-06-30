@@ -30,9 +30,12 @@ function App() {
         value={text} 
         placeholder="What's up?" />
       <button onClick={onSubmit}>Submit</button>
-      <BlogPost text="Blog Post 1" createdAt={new Date()} />
-      <BlogPost text="Blog Post 2" createdAt={new Date()} />
-      <BlogPost text="Blog Post 3" createdAt={new Date()} />
+      {blogPosts.map((blogPost) => (
+        <BlogPost 
+          key={blogPost.createdAt} 
+          text={blogPost.text} 
+          createdAt={blogPost.createdAt} />
+        ))}
     </div>
   );
 }

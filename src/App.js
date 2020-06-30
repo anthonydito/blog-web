@@ -5,9 +5,16 @@ import BlogPost from './BlogPost';
 function App() {
 
   const [text, setText] = React.useState("");
+  const [blogPosts, setBlogPosts] = React.useState([]);
 
   const onSubmit = () => {
-    alert(text);
+    setBlogPosts([
+      {
+        text: text,
+        createdAt: new Date()
+      },
+      ...blogPosts
+    ])
   };
 
   const onInputChange = (e) => {

@@ -7,6 +7,14 @@ function App() {
   const [text, setText] = React.useState("");
   const [blogPosts, setBlogPosts] = React.useState([]);
 
+  React.useEffect(() => {
+    fetch("http://localhost:8080/blogs")
+    .then((data) =>  data.json())
+    .then((blogs) => {
+      setBlogPosts(blogs)
+    })
+  }, []);
+
   const onSubmit = () => {
     setBlogPosts([
       {
@@ -32,9 +40,9 @@ function App() {
       <button onClick={onSubmit}>Submit</button>
       {blogPosts.map((blogPost) => (
         <BlogPost 
-          key={blogPost.createdAt} 
+          key={blogPost.id} 
           text={blogPost.text} 
-          createdAt={blogPost.createdAt} />
+          createdAt={new Date(blogPost.createdAt)} />
         ))}
     </div>
   );

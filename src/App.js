@@ -13,7 +13,7 @@ function App() {
     .then((blogs) => {
       setBlogPosts(blogs)
     })
-  });
+  }, []);
 
   const onSubmit = () => {
     setBlogPosts([

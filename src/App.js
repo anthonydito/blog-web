@@ -16,13 +16,21 @@ function App() {
   }, []);
 
   const onSubmit = () => {
-    setBlogPosts([
-      {
-        text: text,
-        createdAt: new Date()
+    var blogSaving = {
+      text: text
+    };
+    fetch("http://localhost:8080/create-blog", {
+      method: "POST",
+      body: JSON.stringify(blogSaving),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
-      ...blogPosts
-    ])
+    })
+    .then((data) => data.json())
+    .then((blogs) => {
+      setBlogPosts(blogs)
+    });
   };
 
   const onInputChange = (e) => {

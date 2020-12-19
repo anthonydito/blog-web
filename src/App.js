@@ -48,7 +48,7 @@ function App() {
       <button onClick={onSubmit}>Submit</button>
       {blogPosts.map((blogPost) => (
         <BlogPost 
-          key={blogPost.id} 
+          key={blogPost._id} 
           text={blogPost.text} 
           createdAt={new Date(blogPost.createdAt)} />
         ))}

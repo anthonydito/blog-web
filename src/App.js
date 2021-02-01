@@ -1,10 +1,10 @@
 import React from 'react';
-import Blogs from './Blogs';
+import CreateAccount from './CreateAccount';
 
 function App() {
 
     return (
-        <Blogs />
+        <CreateAccount />
     );
 }
 

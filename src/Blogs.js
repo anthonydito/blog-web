@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import './Blogs.css';
 import BlogPost from './BlogPost';
 
-function App() {
+function Blogs() {
 
   const [text, setText] = React.useState("");
   const [blogPosts, setBlogPosts] = React.useState([]);
@@ -56,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default Blogs;

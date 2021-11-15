@@ -21,7 +21,7 @@ function CreateAccount() {
         })
         .then((data) => data.json())
         .then((responsePayload) => {
-            console.log(responsePayload.accessToken); // will change this later!
+            localStorage.setItem("accessToken", responsePayload.accessToken);
         })
     };
 

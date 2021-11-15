@@ -7,7 +7,22 @@ function CreateAccount() {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        alert("will submit with " + username + " and " + password);
+        const signUpData = {
+            username: username,
+            password: password,
+        };
+        fetch("http://localhost:8080/sign-up", {
+            method: "POST",
+            body: JSON.stringify(signUpData),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+        .then((data) => data.json())
+        .then((responsePayload) => {
+            localStorage.setItem("accessToken", responsePayload.accessToken);
+        })
     };
 
     const onUsernameChanged = (e) => {

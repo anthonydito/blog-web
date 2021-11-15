@@ -37,8 +37,13 @@ function Blogs() {
     setText(e.target.value);
   }
 
+  const onSignOut = () => {
+    localStorage.removeItem("accessToken");
+  }
+
   return (
     <div className="App">
+      <button onClick={onSignOut}>Sign Out</button>
       <h1>Your Blog</h1>
       <p>These are your most recent posts</p>
       <input 
